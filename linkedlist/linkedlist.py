@@ -13,8 +13,9 @@ class LinkedList:
         if self.head is None: #empty list
             self.head = new
             self.tail = new
-        self.tail.next = new
-        self.tail = new
+        else:
+            self.tail.next = new
+            self.tail = new
 
     def display(self):
         curr = self.head
