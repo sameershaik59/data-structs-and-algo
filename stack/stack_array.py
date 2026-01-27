@@ -3,17 +3,17 @@ class StackArray:
         self._data = []
 
     def push(self, item):
-        self._data.append(item)
+        self._data.append(item) # O(1) at beginning and end but O(n) in the middle
 
     def pop(self):
         if self.is_empty():
             raise IndexError("pop from empty stack")
-        return self._data.pop()
+        return self._data.pop() # O(1)
 
     def peek(self):
         if self.is_empty():
             raise IndexError("peek from empty stack")
-        return self._data[-1]
+        return self._data[-1] # O(1)
 
     def is_empty(self):
         return len(self._data) == 0
@@ -22,7 +22,7 @@ class StackArray:
         return len(self._data)
 
     def clear(self):
-        self._data = []
+        self._data = [] # O(1)
 
     def __str__(self):
         return f"Stack(bottom -> top): {self._data}"

@@ -9,6 +9,7 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
 
+    # O(logn)
     def insert(self, value):
         new_node = TreeNode(value)
 
